@@ -39,7 +39,6 @@
     
     if (self) {
         self.events = [NSMutableArray array];
-        self.activityImage = [UIImage imageNamed:@"NHCalendarActivity.bundle/NHCalendarActivityIcon"];
     }
     
     return self;
@@ -53,6 +52,10 @@
 - (NSString *)activityTitle
 {
     return NSLocalizedString(@"Save to Calendar", @"Save to Calendar localized string.");
+}
+
+- (UIImage *)activityImage {
+    return [UIImage imageNamed:@"NHCalendarActivity.bundle/NHCalendarActivityIcon"];
 }
 
 -(BOOL)canPerformWithActivityItems:(NSArray *)activityItems
